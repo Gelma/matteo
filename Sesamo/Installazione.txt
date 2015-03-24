@@ -1,0 +1,2 @@
+a) dice funziona solo su win32
+b) il file "sesamo_agg.zip" è un aggiornamento del file principale del programma (sesamo.mdb) che va sovrascritto al termine della installazione. Per installare si decomprime tutto, poi l'eseguibile è nel primo zip.

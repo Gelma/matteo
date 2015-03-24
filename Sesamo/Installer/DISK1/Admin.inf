@@ -1,0 +1,73 @@
+[Source Media Descriptions]
+        "1", "Disk 1", "SETUP.EXE", "."
+
+[Default File Settings]
+"STF_BACKUP" = ""
+"STF_COPY" = "YES"
+"STF_DATE" = "1997-10-15"
+"STF_DECOMPRESS" = "YES"
+"STF_OVERWRITE" = "OLDER"
+"STF_READONLY" = ""
+"STF_ROOT" = "YES"
+"STF_SETTIME" = "YES"
+"STF_TIME" = ""
+"STF_VITAL" = ""
+
+[Program Files]
+"msain200"= 1,msain200.dll,,,,,,1040,,,,,,,SHARED,432128,,,,2.0.0.14,
+"msaju200"= 1,msaju200.dll,,,,,,1033,,,,,,,SHARED,98304,,,,2.0.0.15,
+"msarn200"= 1,msarn200.exe,,,,,,1033,,,,,,,SHARED,1904128,,,,2.0.0.16,
+"utility"= 1,utility.mda,,,,,,,,,,,,,SHARED,229376,,,,,
+"msafin"= 1,msafin.dll,,,,,,1033,,,,,,,SHARED,26624,,,,2.0.0.14,
+"msaole20"= 1,msaole20.dll,,,,,,1033,,,,,,,SHARED,117248,,,,2.0.0.14,
+"soa200"= 1,soa200.dll,,,,,,1033,,,,,,,SHARED,35840,,,,2.0.0.1,
+
+[Jet SysFiles]
+"msajt200"= 1,msajt200.dll,,,,,,1033,,,,,,,SHARED,995328,,,,2.50.0.1606,
+"msabc200"= 1,msabc200.dll,,,,,,1033,,,,,,,SHARED,306176,,,,2.0.0.8,
+"msaexp20"= 1,msaexp20.dll,,,,,,1033,,,,,,,SHARED,82432,,,,2.0.0.13,
+"dao2016"= 1,dao2016.dll,,,,,,1033,,,,,,,SHARED,437760,,,,2.0.0.13,
+"msjeterr"= 1,msjeterr.dll,,,,,,1033,,,,,,,SHARED,11264,,,,2.50.0.1111,
+"msjetint"= 1,msjetint.dll,,,,,,1040,,,,,,,SHARED,18944,,,,2.50.0.1111,
+
+[Files]
+"bootstrp"= 1,setup.exe,,,,,,1033,,,,,,,SHARED,39936,,,,2.50.0.127,
+"stf"= 1,setup.stf,,,,,,,,,,,,,SHARED,37888,,,,,
+"lst"= 1,setup.lst,,,,,,,,,,,,,SHARED,1024,,,,,
+
+[VSHARE]
+"vshare"= 1,vshare.386,,,,,,1033,,,,,,,,15360,SYSTEM,,,3.11.0.401,
+"ver"= 1,ver.dll,,,,,,1040,,,,,,,,10240,SYSTEM,,,3.11.0.300,
+
+[User Files]
+"start_mdb"= 1,start.mdb,,,,,,,,,,,,,,98304,,,,,
+"msau200_dll"= 1,msau200.dll,,,,,,,,,,,,,,20992,,,,2.0.0.1,
+"helpex_hlp"= 1,helpex.hlp,,,,,,,,,,,,,,65024,,,,,
+"wzlib_mda"= 1,wzlib.mda,,,,,,,,,,,,,,622592,,,,,
+"bak12_gif"= 1,bak12.gif,,,,,,,,,,,,,,9216,,,,,
+"bal7_gif"= 1,bal7.gif,,,,,,,,,,,,,,1536,,,,,
+"comune_tit"= 1,comune.tit,,,,,,,,,,,,,,98304,,,,,
+"comunita_tit"= 1,comunita.tit,,,,,,,,,,,,,,98304,,,,,
+"sesamo_rlx"= 1,sesamo.rlx,,,,,,,,,,,,,,360448,,,,,
+"titol_tix"= 1,titol.tix,,,,,,,,,,,,,,98304,,,,,
+"sesamo_mdb"= 1,sesamo.mdb,,,,,,,,,,,,,,1310720,,,,,
+"indice_idx"= 1,indice.idx,,,,,,,,,,,,,,65536,,,,,
+"sesamo_ini"= 1,sesamo.ini,,,,,,,,,,,,,,5632,,,,,
+"demo_rls"= 1,demo.rls,,,,,,,,,,,,,,360448,,,,,
+"icon_ico"= 1,icon.ico,,,,,,,,,,,,,,1024,,,,,
+
+[Workgroup Files]
+"wrkgadm"= 1,WRKGADM.EXE,,,,,,,,,,,,,SHARED,111616,,,,2.0.0.100,
+
+[Ole2 Files]
+"mstoolbr"= 1,MSTOOLBR.DLL,,,,,,1033,,,,,,,,9216,SYSTEM,,,1.0.0.2,
+"stdole"= 1,STDOLE.TLB,,,,,,1033,,,,,,,SHARED,5632,,,,2.3.3023.1,
+"compobj"= 1,COMPOBJ.DLL,,,,,,1033,,,,,,,,109056,SYSTEM,,,2.3.125.142,
+"storage"= 1,STORAGE.DLL,,,,,,,,,,,,,,157696,SYSTEM,,,2.3.125.140,
+"typelib"= 1,TYPELIB.DLL,,,,,,1033,,,,,,,,178176,SYSTEM,,,2.3.3025.1,
+"ole2"= 1,OLE2.DLL,,,,,,1033,,,,,,,,304640,SYSTEM,,,2.3.125.142,
+"ole2conv"= 1,OLE2CONV.DLL,,,,,,1033,,,,,,,,57344,SYSTEM,,,2.1.0.1,
+"ole2disp"= 1,OLE2DISP.DLL,,,,,,1033,,,,,,,,165376,SYSTEM,,,2.3.3023.1,
+"ole2nls"= 1,OLE2NLS.DLL,,,,,,1033,,,,,,,,153088,SYSTEM,,,2.3.3023.1,
+"ole2prox"= 1,OLE2PROX.DLL,,,,,,1033,,,,,,,,51712,SYSTEM,,,2.2.120.121,
+"ole2reg"= 1,OLE2.REG,,,,,,,,,,,,,SHARED,25088,,,,,

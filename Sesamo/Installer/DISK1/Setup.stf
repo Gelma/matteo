@@ -1,0 +1,367 @@
+App Name	MSADT200.APP
+App Version	1.00
+Frame Bitmap	"msacahbb.dll, 123, 124"
+Frame Caption	Sesamo Setup
+Dialog Caption Base	Sesamo
+Welcome String	This program installs the Sesamo application on your machine by copying files and modifying system configuration files as necessary.
+Usage String	Usage: Setup or Setup /A\nSetup /A runs the setup in Administrator mode.
+About Box String	Setup
+Check Modules	msaccess, Microsoft Access, msarn110,Access Runtime 1.x, msarn200,Access 2.0 runtime , vb,MS Visual Basic, vbrun100,VB Runtime 1.0, vbrun200,VB Runtime 2.0, vbrun300,VB Runtime 3.0, graph, MS Graph
+Source Directory	
+MSAPPS Location	
+MSAPPS Mode	local
+Inf File Name	setup.inf
+Suppress Copy Disincentive Dialogs
+Suppress Serial Number Dialog
+Maximum Object ID	 343
+Admin Mode Root Object ID	4 : 1
+Floppy Mode Root Object ID	3 : 1
+Network Mode Root Object ID	5 : 1
+Maintenance Mode Root Object ID	
+Batch Mode Root Object ID	
+Setup Version	1.0.1.127
+
+ObjID	Install During Batch Mode	Title	Descr	Type	Data	BMP Id	Vital	Shared	Dir Chang	Dest Dir	Check Dir	Installed By Us
+1		Sesamo		AppSearch	"""c:\sesamo"", ""________.___"", """", 0, ""no"", ""yes"", "							
+2		==== Installation Types ====										
+3		Floppy Installation		AppMainDlg	7				yes			
+4		Administrative Installation		Group	10 25 39 42 320 17 18							
+5		Network Installation		AppMainDlg	7 8				yes			
+6		==== Installation Forms ====										
+7		&Complete	Install all files for this application	Group	17 18 20 21 22 23	"msacahbb.dll, 115"						
+8		&Workstation	Install the application shared off the network	Group	17 18 12	"msacahbb.dll, 116"						
+9		==== Admin Installs ====										
+10		AdminSetupFiles		CopySection	"""Admin Files"""							
+11		==== Workstation Installs ====										
+12		Workstation		Group	13 14 15							
+13		Workstation_File		Group	25 39 42 320					%s		
+14		Workstation_User		Group	36 54 336							
+15		Turn shared mode on		UseSharedMode								
+16		==== Destination Directory Settings ====										
+17				CustomAction	"""msacahbb.dll"", ""ADTDestDirWin"""							
+18				CustomAction	"""msacahbb.dll"", ""ADTDestDirSys"""							
+19		==== Option Installs ====										
+20		Runtime		Group	25 36							
+21		Wrkgadm		Group	39							
+22		OLE		Group	42 54							
+23		USER		Group	320 336							
+24		==== Install MS Access 2.0 Runtime ====										
+25		Runtime_File		Group	26 27 34							
+26		Runtime_Files		CopySection	"""Program Files"""							
+27		Runtime_SysFiles		Group	28 29 30 31 32 33							
+28		Runtime_DAO		InstallSysFile	"""Jet SysFiles"", ""dao2016"""							
+29		Runtime_MSABC		InstallSysFile	"""Jet SysFiles"", ""msabc200"""							
+30		Runtime_MSAEXP		InstallSysFile	"""Jet SysFiles"", ""msaexp20"""							
+31		Runtime_MSAJT		InstallSysFile	"""Jet SysFiles"", ""msajt200"""							
+32		Runtime_MSJETERR		InstallSysFile	"""Jet SysFiles"", ""msjeterr"""							
+33		Runtime_MSJETINT		InstallSysFile	"""Jet SysFiles"", ""msjetint"""							
+34		Runtime_CheckShare		AddShareToAutoexec	"500, 5120, VSHARE, vshare, 35"							
+35		Runtime_AddVerDll		InstallSysFile	"""VSHARE"", ""ver"""							
+36		Runtime_User		Group	37							
+37		Runtime_UserReg		CustomAction	"""msacahbb.dll"", ""RegisterOCX"", ""%s\dao2016.dll"""					%28		
+38		==== Install Workgroup Administrator ====										
+39		Wrkgadm_File		Group	40							
+40		Wrkgadm_Files		CopySection	"""Workgroup Files"""							
+41		==== Install OLE 2.01 ====										
+42		OLE_File		Group	43 44 45 47 48 49 50 51 52 53 46							
+43		OLE_compobj		InstallSysFile	"""Ole2 Files"", ""compobj"""							
+44		OLE_mstoolbr		InstallSysFile	"""Ole2 Files"", ""mstoolbr"""							
+45		OLE_ole2		InstallSysFile	"""Ole2 Files"", ""ole2"""							
+46		OLE_ole2reg		InstallSysFile	"""Ole2 Files"", ""ole2reg"""							
+47		OLE_ole2conv		InstallSysFile	"""Ole2 Files"", ""ole2conv"""							
+48		OLE_ole2disp		InstallSysFile	"""Ole2 Files"", ""ole2disp"""							
+49		OLE_ole2nls		InstallSysFile	"""Ole2 Files"", ""ole2nls"""							
+50		OLE_ole2prox		InstallSysFile	"""Ole2 Files"", ""ole2prox"""							
+51		OLE_storage		InstallSysFile	"""Ole2 Files"", ""storage"""							
+52		OLE_stdole		InstallSysFile	"""Ole2 Files"", ""stdole"""							
+53		OLE_typelib		InstallSysFile	"""Ole2 Files"", ""typelib"""							
+54		OLE_User		Group	55 56 57 58 59 60 61 62 63 64 65 66 67							
+55		OLE_RegGrp1		Group	68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87							
+56		OLE_RegGrp2		Group	88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107							
+57		OLE_RegGrp3		Group	108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127							
+58		OLE_RegGrp4		Group	128 129 130 131 132 133 134 135 136 137 138 139 140 141 142 143 144 145 146 147							
+59		OLE_RegGrp5		Group	148 149 150 151 152 153 154 155 156 157 158 159 160 161 162 163 164 165 166 167							
+60		OLE_RegGrp6		Group	168 169 170 171 172 173 174 175 176 177 178 179 180 181 182 183 184 185 186 187							
+61		OLE_RegGrp7		Group	188 189 190 191 192 193 194 195 196 197 198 199 200 201 202 203 204 205 206 207							
+62		OLE_RegGrp8		Group	208 209 210 211 212 213 214 215 216 217 218 219 220 221 222 223 224 225 226 227							
+63		OLE_RegGrp9		Group	228 229 230 231 232 233 234 235 236 237 238 239 240 241 242 243 244 245 246 247							
+64		OLE_RegGrp10		Group	248 249 250 251 252 253 254 255 256 257 258 259 260 261 262 263 264 265 266 267							
+65		OLE_RegGrp11		Group	268 269 270 271 272 273 274 275 276 277 278 279 280 281 282 283 284 285 286 287							
+66		OLE_RegGrp12		Group	288 289 290 291 292 293 294 295 296 297 298 299 300 301 302 303 304 305 306 307							
+67		OLE_RegGrp13		Group	308 309 310 311 312 313 314 315 316 317 318							
+68		OLE201_Reg306		AddRegData	"""Software\Microsoft\OLE1\UnregisteredVerb"", ""Edit"""							
+69		OLE201_Reg307		AddRegData	"""Software\Microsoft\OLE2\UnknownUserType"", ""Unknown"""							
+70		OLE201_Reg308		AddRegData	"""StaticMetafile"", ""Picture (Metafile)"""							
+71		OLE201_Reg309		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}"", ""Picture (Metafile)"""							
+72		OLE201_Reg310		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}\AuxUserType\2"", ""Picture"""							
+73		OLE201_Reg311		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}\AuxUserType\2"", ""Picture"""							
+74		OLE201_Reg312		AddRegData	"""StaticDib"", ""Picture (Device Independent Bitmap)"""							
+75		OLE201_Reg313		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}"", ""Picture (Device Independent Bitmap)"""							
+76		OLE201_Reg314		AddRegData	"""CLSID\{0003000a-0000-0000-C000-000000000046}"", ""Paintbrush Picture"""							
+77		OLE201_Reg315		AddRegData	"""CLSID\{00030007-0000-0000-C000-000000000046}"", ""Microsoft Drawing"""							
+78		OLE201_Reg316		AddRegData	"""CLSID"", ""OLE (Part 1 of 5)"""							
+79		OLE201_Reg317		AddRegData	"""Software"", ""OLE (Part 2 of 5)"""							
+80		OLE201_Reg318		AddRegData	"""Interface"", ""OLE (Part 3 of 5)"""							
+81		OLE201_Reg319		AddRegData	"""TypeLib"", ""OLE (Part 4 of 5)"""							
+82		OLE201_Reg320		AddRegData	"""FileType"", ""OLE (Part 5 of 5)"""							
+83		OLE201_Reg321		AddRegData	"""CLSID\{00000300-0000-0000-C000-000000000046}"", ""StdOleLink"""							
+84		OLE201_Reg322		AddRegData	"""CLSID\{00000300-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+85		OLE201_Reg323		AddRegData	"""CLSID\{00000301-0000-0000-C000-000000000046}"", ""StdMemStm"""							
+86		OLE201_Reg324		AddRegData	"""CLSID\{00000301-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+87		OLE201_Reg325		AddRegData	"""CLSID\{00000302-0000-0000-C000-000000000046}"", ""StdMemBytes"""							
+88		OLE201_Reg326		AddRegData	"""CLSID\{00000302-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+89		OLE201_Reg327		AddRegData	"""CLSID\{00000303-0000-0000-C000-000000000046}"", ""FileMoniker"""							
+90		OLE201_Reg328		AddRegData	"""CLSID\{00000303-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+91		OLE201_Reg329		AddRegData	"""CLSID\{00000304-0000-0000-C000-000000000046}"", ""ItemMoniker"""							
+92		OLE201_Reg330		AddRegData	"""CLSID\{00000304-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+93		OLE201_Reg331		AddRegData	"""CLSID\{00000305-0000-0000-C000-000000000046}"", ""AntiMoniker"""							
+94		OLE201_Reg332		AddRegData	"""CLSID\{00000305-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+95		OLE201_Reg333		AddRegData	"""CLSID\{00000306-0000-0000-C000-000000000046}"", ""PointerMoniker"""							
+96		OLE201_Reg334		AddRegData	"""CLSID\{00000306-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+97		OLE201_Reg335		AddRegData	"""CLSID\{00000308-0000-0000-C000-000000000046}"", ""PackagerMoniker"""							
+98		OLE201_Reg336		AddRegData	"""CLSID\{00000308-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+99		OLE201_Reg337		AddRegData	"""CLSID\{00000309-0000-0000-C000-000000000046}"", ""CompositeMoniker"""							
+100		OLE201_Reg338		AddRegData	"""CLSID\{00000309-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+101		OLE201_Reg339		AddRegData	"""CLSID\{0000030A-0000-0000-C000-000000000046}"", ""DdeCompositeMoniker"""							
+102		OLE201_Reg340		AddRegData	"""CLSID\{0000030A-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+103		OLE201_Reg341		AddRegData	"""CLSID\{0000030B-0000-0000-C000-000000000046}"", ""DfMarshal"""							
+104		OLE201_Reg342		AddRegData	"""CLSID\{0000030B-0000-0000-C000-000000000046}\InprocServer"", ""storage.dll"""							
+105		OLE201_Reg343		AddRegData	"""CLSID\{0000030C-0000-0000-C000-000000000046}"", ""PSGenObject"""							
+106		OLE201_Reg344		AddRegData	"""CLSID\{0000030C-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+107		OLE201_Reg345		AddRegData	"""CLSID\{0000030D-0000-0000-C000-000000000046}"", ""PSClientSite"""							
+108		OLE201_Reg346		AddRegData	"""CLSID\{0000030D-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+109		OLE201_Reg347		AddRegData	"""CLSID\{0000030E-0000-0000-C000-000000000046}"", ""PSClassObject"""							
+110		OLE201_Reg348		AddRegData	"""CLSID\{0000030E-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+111		OLE201_Reg349		AddRegData	"""CLSID\{0000030F-0000-0000-C000-000000000046}"", ""PSInPlaceActive"""							
+112		OLE201_Reg350		AddRegData	"""CLSID\{0000030F-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+113		OLE201_Reg351		AddRegData	"""CLSID\{00000310-0000-0000-C000-000000000046}"", ""PSInPlaceFrame"""							
+114		OLE201_Reg352		AddRegData	"""CLSID\{00000310-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+115		OLE201_Reg353		AddRegData	"""CLSID\{00000311-0000-0000-C000-000000000046}"", ""PSDragDrop"""							
+116		OLE201_Reg354		AddRegData	"""CLSID\{00000311-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+117		OLE201_Reg355		AddRegData	"""CLSID\{00000312-0000-0000-C000-000000000046}"", ""PSBindCtx"""							
+118		OLE201_Reg356		AddRegData	"""CLSID\{00000312-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+119		OLE201_Reg357		AddRegData	"""CLSID\{00000313-0000-0000-C000-000000000046}"", ""PSEnumerators"""							
+120		OLE201_Reg358		AddRegData	"""CLSID\{00000313-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+121		OLE201_Reg359		AddRegData	"""CLSID\{00000314-0000-0000-C000-000000000046}"", ""PSStore"""							
+122		OLE201_Reg360		AddRegData	"""CLSID\{00000314-0000-0000-C000-000000000046}\InprocServer"", ""ole2prox.dll"""							
+123		OLE201_Reg361		AddRegData	"""StaticMetafile\CLSID"", ""{00000315-0000-0000-C000-000000000046}"""							
+124		OLE201_Reg362		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}\ProgID"", ""StaticMetafile"""							
+125		OLE201_Reg363		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+126		OLE201_Reg364		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}\DataFormats\DefaultFile"", ""3"""							
+127		OLE201_Reg365		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}\DataFormats\GetSet\0"", ""3,1,32,3"""							
+128		OLE201_Reg366		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}\MiscStatus"", ""536"""							
+129		OLE201_Reg367		AddRegData	"""CLSID\{00000315-0000-0000-C000-000000000046}\Conversion\Readable\Main"", ""3,MSDraw"""							
+130		OLE201_Reg368		AddRegData	"""StaticDib\CLSID"", ""{00000316-0000-0000-C000-000000000046}"""							
+131		OLE201_Reg369		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}\ProgID"", ""StaticDib"""							
+132		OLE201_Reg370		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}\InprocServer"", ""ole2.dll"""							
+133		OLE201_Reg371		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}\DataFormats\DefaultFile"", ""8"""							
+134		OLE201_Reg372		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}\DataFormats\GetSet\0"", ""8,1,1,3"""							
+135		OLE201_Reg373		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}\MiscStatus"", ""536"""							
+136		OLE201_Reg374		AddRegData	"""CLSID\{00000316-0000-0000-C000-000000000046}\Conversion\Readable\Main"", ""8,PBrush"""							
+137		OLE201_Reg375		AddRegData	"""CLSID\{0003000a-0000-0000-C000-000000000046}\ProgID"", ""PBrush"""							
+138		OLE201_Reg376		AddRegData	"""CLSID\{0003000a-0000-0000-C000-000000000046}\Ole1Class"", ""PBrush"""							
+139		OLE201_Reg377		AddRegData	"""CLSID\{0003000a-0000-0000-C000-000000000046}\MiscStatus"", ""512"""							
+140		OLE201_Reg378		AddRegData	"""CLSID\{0003000a-0000-0000-C000-000000000046}\Conversion\Readable\Main"", ""8"""							
+141		OLE201_Reg379		AddRegData	"""CLSID\{00030007-0000-0000-C000-000000000046}\ProgID"", ""MSDraw"""							
+142		OLE201_Reg380		AddRegData	"""CLSID\{00030007-0000-0000-C000-000000000046}\Ole1Class"", ""MSDraw"""							
+143		OLE201_Reg381		AddRegData	"""CLSID\{00030007-0000-0000-C000-000000000046}\MiscStatus"", ""512"""							
+144		OLE201_Reg382		AddRegData	"""Interface\{00000000-0000-0000-C000-000000000046}"", ""IUnknown"""							
+145		OLE201_Reg383		AddRegData	"""Interface\{00000000-0000-0000-C000-000000000046}\BaseInterface"", """""							
+146		OLE201_Reg384		AddRegData	"""Interface\{00000000-0000-0000-C000-000000000046}\NumMethods"", ""3"""							
+147		OLE201_Reg385		AddRegData	"""Interface\{00000001-0000-0000-C000-000000000046}"", ""IClassFactory"""							
+148		OLE201_Reg386		AddRegData	"""Interface\{00000001-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+149		OLE201_Reg387		AddRegData	"""Interface\{00000001-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030E-0000-0000-C000-000000000046}"""							
+150		OLE201_Reg388		AddRegData	"""Interface\{00000002-0000-0000-C000-000000000046}"", ""IMalloc"""							
+151		OLE201_Reg389		AddRegData	"""Interface\{00000002-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+152		OLE201_Reg390		AddRegData	"""Interface\{00000003-0000-0000-C000-000000000046}"", ""IMarshal"""							
+153		OLE201_Reg391		AddRegData	"""Interface\{00000003-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+154		OLE201_Reg392		AddRegData	"""Interface\{00000004-0000-0000-C000-000000000046}"", ""IRpcChannel"""							
+155		OLE201_Reg393		AddRegData	"""Interface\{00000004-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+156		OLE201_Reg394		AddRegData	"""Interface\{00000005-0000-0000-C000-000000000046}"", ""IRpcStub"""							
+157		OLE201_Reg395		AddRegData	"""Interface\{00000005-0000-0000-C000-000000000046}\NumMethods"", ""8"""							
+158		OLE201_Reg396		AddRegData	"""Interface\{00000007-0000-0000-C000-000000000046}"", ""IRpcProxy"""							
+159		OLE201_Reg397		AddRegData	"""Interface\{00000007-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+160		OLE201_Reg398		AddRegData	"""Interface\{00000009-0000-0000-C000-000000000046}"", ""IPSFactory"""							
+161		OLE201_Reg399		AddRegData	"""Interface\{00000009-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+162		OLE201_Reg400		AddRegData	"""Interface\{0000000A-0000-0000-C000-000000000046}"", ""ILockBytes"""							
+163		OLE201_Reg401		AddRegData	"""Interface\{0000000A-0000-0000-C000-000000000046}\NumMethods"", ""10"""							
+164		OLE201_Reg402		AddRegData	"""Interface\{0000000A-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000314-0000-0000-C000-000000000046}"""							
+165		OLE201_Reg403		AddRegData	"""Interface\{0000000B-0000-0000-C000-000000000046}"", ""IStorage"""							
+166		OLE201_Reg404		AddRegData	"""Interface\{0000000B-0000-0000-C000-000000000046}\NumMethods"", ""18"""							
+167		OLE201_Reg405		AddRegData	"""Interface\{0000000B-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000314-0000-0000-C000-000000000046}"""							
+168		OLE201_Reg406		AddRegData	"""Interface\{0000000C-0000-0000-C000-000000000046}"", ""IStream"""							
+169		OLE201_Reg407		AddRegData	"""Interface\{0000000C-0000-0000-C000-000000000046}\NumMethods"", ""14"""							
+170		OLE201_Reg408		AddRegData	"""Interface\{0000000C-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000314-0000-0000-C000-000000000046}"""							
+171		OLE201_Reg409		AddRegData	"""Interface\{0000000D-0000-0000-C000-000000000046}"", ""IEnumSTATSTG"""							
+172		OLE201_Reg410		AddRegData	"""Interface\{0000000D-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+173		OLE201_Reg411		AddRegData	"""Interface\{0000000E-0000-0000-C000-000000000046}"", ""IBindCtx"""							
+174		OLE201_Reg412		AddRegData	"""Interface\{0000000E-0000-0000-C000-000000000046}\NumMethods"", ""13"""							
+175		OLE201_Reg413		AddRegData	"""Interface\{0000000E-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000312-0000-0000-C000-000000000046}"""							
+176		OLE201_Reg414		AddRegData	"""Interface\{0000000F-0000-0000-C000-000000000046}"", ""IMoniker"""							
+177		OLE201_Reg415		AddRegData	"""Interface\{0000000F-0000-0000-C000-000000000046}\BaseInterface"", ""{00000109-0000-0000-C000-000000000046}"""							
+178		OLE201_Reg416		AddRegData	"""Interface\{0000000F-0000-0000-C000-000000000046}\NumMethods"", ""23"""							
+179		OLE201_Reg417		AddRegData	"""Interface\{00000010-0000-0000-C000-000000000046}"", ""IRunningObjectTable"""							
+180		OLE201_Reg418		AddRegData	"""Interface\{00000010-0000-0000-C000-000000000046}\NumMethods"", ""10"""							
+181		OLE201_Reg419		AddRegData	"""Interface\{00000012-0000-0000-C000-000000000046}"", ""IRootStorage"""							
+182		OLE201_Reg420		AddRegData	"""Interface\{00000012-0000-0000-C000-000000000046}\NumMethods"", ""4"""							
+183		OLE201_Reg421		AddRegData	"""Interface\{00000016-0000-0000-C000-000000000046}"", ""IMessageFilter"""							
+184		OLE201_Reg422		AddRegData	"""Interface\{00000016-0000-0000-C000-000000000046}\NumMethods"", ""6"""							
+185		OLE201_Reg423		AddRegData	"""Interface\{00000018-0000-0000-C000-000000000046}"", ""IStdMarshalInfo"""							
+186		OLE201_Reg424		AddRegData	"""Interface\{00000018-0000-0000-C000-000000000046}\NumMethods"", ""4"""							
+187		OLE201_Reg425		AddRegData	"""Interface\{00000019-0000-0000-C000-000000000046}"", ""IExternalConnection"""							
+188		OLE201_Reg426		AddRegData	"""Interface\{00000019-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+189		OLE201_Reg427		AddRegData	"""Interface\{00000100-0000-0000-C000-000000000046}"", ""IEnumUnknown"""							
+190		OLE201_Reg428		AddRegData	"""Interface\{00000100-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+191		OLE201_Reg429		AddRegData	"""Interface\{00000101-0000-0000-C000-000000000046}"", ""IEnumString"""							
+192		OLE201_Reg430		AddRegData	"""Interface\{00000101-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+193		OLE201_Reg431		AddRegData	"""Interface\{00000102-0000-0000-C000-000000000046}"", ""IEnumMoniker"""							
+194		OLE201_Reg432		AddRegData	"""Interface\{00000102-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+195		OLE201_Reg433		AddRegData	"""Interface\{00000103-0000-0000-C000-000000000046}"", ""IEnumFORMATETC"""							
+196		OLE201_Reg434		AddRegData	"""Interface\{00000103-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+197		OLE201_Reg435		AddRegData	"""Interface\{00000103-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000313-0000-0000-C000-000000000046}"""							
+198		OLE201_Reg436		AddRegData	"""Interface\{00000104-0000-0000-C000-000000000046}"", ""IEnumOLEVERB"""							
+199		OLE201_Reg437		AddRegData	"""Interface\{00000104-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+200		OLE201_Reg438		AddRegData	"""Interface\{00000104-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000313-0000-0000-C000-000000000046}"""							
+201		OLE201_Reg439		AddRegData	"""Interface\{00000105-0000-0000-C000-000000000046}"", ""IEnumSTATDATA"""							
+202		OLE201_Reg440		AddRegData	"""Interface\{00000105-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+203		OLE201_Reg441		AddRegData	"""Interface\{00000105-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000313-0000-0000-C000-000000000046}"""							
+204		OLE201_Reg442		AddRegData	"""Interface\{00000109-0000-0000-C000-000000000046}"", ""IPersistStream"""							
+205		OLE201_Reg443		AddRegData	"""Interface\{00000109-0000-0000-C000-000000000046}\BaseInterface"", ""{0000010C-0000-0000-C000-000000000046}"""							
+206		OLE201_Reg444		AddRegData	"""Interface\{00000109-0000-0000-C000-000000000046}\NumMethods"", ""8"""							
+207		OLE201_Reg445		AddRegData	"""Interface\{0000010A-0000-0000-C000-000000000046}"", ""IPersistStorage"""							
+208		OLE201_Reg446		AddRegData	"""Interface\{0000010A-0000-0000-C000-000000000046}\BaseInterface"", ""{0000010C-0000-0000-C000-000000000046}"""							
+209		OLE201_Reg447		AddRegData	"""Interface\{0000010A-0000-0000-C000-000000000046}\NumMethods"", ""10"""							
+210		OLE201_Reg448		AddRegData	"""Interface\{0000010A-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+211		OLE201_Reg449		AddRegData	"""Interface\{0000010B-0000-0000-C000-000000000046}"", ""IPersistFile"""							
+212		OLE201_Reg450		AddRegData	"""Interface\{0000010B-0000-0000-C000-000000000046}\BaseInterface"", ""{0000010C-0000-0000-C000-000000000046}"""							
+213		OLE201_Reg451		AddRegData	"""Interface\{0000010B-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+214		OLE201_Reg452		AddRegData	"""Interface\{0000010B-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+215		OLE201_Reg453		AddRegData	"""Interface\{0000010C-0000-0000-C000-000000000046}"", ""IPersist"""							
+216		OLE201_Reg454		AddRegData	"""Interface\{0000010C-0000-0000-C000-000000000046}\NumMethods"", ""4"""							
+217		OLE201_Reg455		AddRegData	"""Interface\{0000010C-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+218		OLE201_Reg456		AddRegData	"""Interface\{0000010D-0000-0000-C000-000000000046}"", ""IViewObject"""							
+219		OLE201_Reg457		AddRegData	"""Interface\{0000010D-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+220		OLE201_Reg458		AddRegData	"""Interface\{0000010E-0000-0000-C000-000000000046}"", ""IDataObject"""							
+221		OLE201_Reg459		AddRegData	"""Interface\{0000010E-0000-0000-C000-000000000046}\NumMethods"", ""12"""							
+222		OLE201_Reg460		AddRegData	"""Interface\{0000010E-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+223		OLE201_Reg461		AddRegData	"""Interface\{0000010F-0000-0000-C000-000000000046}"", ""IAdviseSink"""							
+224		OLE201_Reg462		AddRegData	"""Interface\{0000010F-0000-0000-C000-000000000046}\NumMethods"", ""8"""							
+225		OLE201_Reg463		AddRegData	"""Interface\{0000010F-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030D-0000-0000-C000-000000000046}"""							
+226		OLE201_Reg464		AddRegData	"""Interface\{00000110-0000-0000-C000-000000000046}"", ""IDataAdviseHolder"""							
+227		OLE201_Reg465		AddRegData	"""Interface\{00000110-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+228		OLE201_Reg466		AddRegData	"""Interface\{00000111-0000-0000-C000-000000000046}"", ""IOleAdviseHolder"""							
+229		OLE201_Reg467		AddRegData	"""Interface\{00000111-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+230		OLE201_Reg468		AddRegData	"""Interface\{00000112-0000-0000-C000-000000000046}"", ""IOleObject"""							
+231		OLE201_Reg469		AddRegData	"""Interface\{00000112-0000-0000-C000-000000000046}\NumMethods"", ""24"""							
+232		OLE201_Reg470		AddRegData	"""Interface\{00000112-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+233		OLE201_Reg471		AddRegData	"""Interface\{00000113-0000-0000-C000-000000000046}"", ""IOleInPlaceObject"""							
+234		OLE201_Reg472		AddRegData	"""Interface\{00000113-0000-0000-C000-000000000046}\BaseInterface"", ""{00000114-0000-0000-C000-000000000046}"""							
+235		OLE201_Reg473		AddRegData	"""Interface\{00000113-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+236		OLE201_Reg474		AddRegData	"""Interface\{00000113-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+237		OLE201_Reg475		AddRegData	"""Interface\{00000114-0000-0000-C000-000000000046}"", ""IOleWindow"""							
+238		OLE201_Reg476		AddRegData	"""Interface\{00000114-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+239		OLE201_Reg477		AddRegData	"""Interface\{00000115-0000-0000-C000-000000000046}"", ""IOleInPlaceUIWindow"""							
+240		OLE201_Reg478		AddRegData	"""Interface\{00000115-0000-0000-C000-000000000046}\BaseInterface"", ""{00000114-0000-0000-C000-000000000046}"""							
+241		OLE201_Reg479		AddRegData	"""Interface\{00000115-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+242		OLE201_Reg480		AddRegData	"""Interface\{00000115-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000310-0000-0000-C000-000000000046}"""							
+243		OLE201_Reg481		AddRegData	"""Interface\{00000116-0000-0000-C000-000000000046}"", ""IOleInPlaceFrame"""							
+244		OLE201_Reg482		AddRegData	"""Interface\{00000116-0000-0000-C000-000000000046}\NumMethods"", ""15"""							
+245		OLE201_Reg483		AddRegData	"""Interface\{00000116-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000310-0000-0000-C000-000000000046}"""							
+246		OLE201_Reg484		AddRegData	"""Interface\{00000117-0000-0000-C000-000000000046}"", ""IOleInPlaceActiveObject"""							
+247		OLE201_Reg485		AddRegData	"""Interface\{00000117-0000-0000-C000-000000000046}\BaseInterface"", ""{00000114-0000-0000-C000-000000000046}"""							
+248		OLE201_Reg486		AddRegData	"""Interface\{00000117-0000-0000-C000-000000000046}\NumMethods"", ""10"""							
+249		OLE201_Reg487		AddRegData	"""Interface\{00000117-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030F-0000-0000-C000-000000000046}"""							
+250		OLE201_Reg488		AddRegData	"""Interface\{00000118-0000-0000-C000-000000000046}"", ""IOleClientSite"""							
+251		OLE201_Reg489		AddRegData	"""Interface\{00000118-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+252		OLE201_Reg490		AddRegData	"""Interface\{00000118-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030D-0000-0000-C000-000000000046}"""							
+253		OLE201_Reg491		AddRegData	"""Interface\{00000119-0000-0000-C000-000000000046}"", ""IOleInPlaceSite"""							
+254		OLE201_Reg492		AddRegData	"""Interface\{00000119-0000-0000-C000-000000000046}\BaseInterface"", ""{00000114-0000-0000-C000-000000000046}"""							
+255		OLE201_Reg493		AddRegData	"""Interface\{00000119-0000-0000-C000-000000000046}\NumMethods"", ""15"""							
+256		OLE201_Reg494		AddRegData	"""Interface\{00000119-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030D-0000-0000-C000-000000000046}"""							
+257		OLE201_Reg495		AddRegData	"""Interface\{0000011A-0000-0000-C000-000000000046}"", ""IParseDisplayName"""							
+258		OLE201_Reg496		AddRegData	"""Interface\{0000011A-0000-0000-C000-000000000046}\NumMethods"", ""4"""							
+259		OLE201_Reg497		AddRegData	"""Interface\{0000011A-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+260		OLE201_Reg498		AddRegData	"""Interface\{0000011B-0000-0000-C000-000000000046}"", ""IOleContainer"""							
+261		OLE201_Reg499		AddRegData	"""Interface\{0000011B-0000-0000-C000-000000000046}\BaseInterface"", ""{0000011A-0000-0000-C000-000000000046}"""							
+262		OLE201_Reg500		AddRegData	"""Interface\{0000011B-0000-0000-C000-000000000046}\NumMethods"", ""6"""							
+263		OLE201_Reg501		AddRegData	"""Interface\{0000011B-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+264		OLE201_Reg502		AddRegData	"""Interface\{0000011C-0000-0000-C000-000000000046}"", ""IOleItemContainer"""							
+265		OLE201_Reg503		AddRegData	"""Interface\{0000011C-0000-0000-C000-000000000046}\BaseInterface"", ""{0000011B-0000-0000-C000-000000000046}"""							
+266		OLE201_Reg504		AddRegData	"""Interface\{0000011C-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+267		OLE201_Reg505		AddRegData	"""Interface\{0000011C-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{0000030C-0000-0000-C000-000000000046}"""							
+268		OLE201_Reg506		AddRegData	"""Interface\{0000011D-0000-0000-C000-000000000046}"", ""IOleLink"""							
+269		OLE201_Reg507		AddRegData	"""Interface\{0000011D-0000-0000-C000-000000000046}\NumMethods"", ""14"""							
+270		OLE201_Reg508		AddRegData	"""Interface\{0000011E-0000-0000-C000-000000000046}"", ""IOleCache"""							
+271		OLE201_Reg509		AddRegData	"""Interface\{0000011E-0000-0000-C000-000000000046}\NumMethods"", ""8"""							
+272		OLE201_Reg510		AddRegData	"""Interface\{00000121-0000-0000-C000-000000000046}"", ""IDropSource"""							
+273		OLE201_Reg511		AddRegData	"""Interface\{00000121-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+274		OLE201_Reg512		AddRegData	"""Interface\{00000122-0000-0000-C000-000000000046}"", ""IDropTarget"""							
+275		OLE201_Reg513		AddRegData	"""Interface\{00000122-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+276		OLE201_Reg514		AddRegData	"""Interface\{00000122-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00000311-0000-0000-C000-000000000046}"""							
+277		OLE201_Reg515		AddRegData	"""Interface\{00000124-0000-0000-C000-000000000046}"", ""IDebugStream"""							
+278		OLE201_Reg516		AddRegData	"""Interface\{00000124-0000-0000-C000-000000000046}\NumMethods"", ""19"""							
+279		OLE201_Reg517		AddRegData	"""Interface\{00000125-0000-0000-C000-000000000046}"", ""IAdviseSink2"""							
+280		OLE201_Reg518		AddRegData	"""Interface\{00000125-0000-0000-C000-000000000046}\BaseInterface"", ""{0000010F-0000-0000-C000-000000000046}"""							
+281		OLE201_Reg519		AddRegData	"""Interface\{00000125-0000-0000-C000-000000000046}\NumMethods"", ""9"""							
+282		OLE201_Reg520		AddRegData	"""Interface\{00000126-0000-0000-C000-000000000046}"", ""IRunnableObject"""							
+283		OLE201_Reg521		AddRegData	"""Interface\{00000126-0000-0000-C000-000000000046}\NumMethods"", ""8"""							
+284		OLE201_Reg522		AddRegData	"""Interface\{00000127-0000-0000-C000-000000000046}"", ""IViewObject2"""							
+285		OLE201_Reg523		AddRegData	"""Interface\{00000127-0000-0000-C000-000000000046}\BaseInterface"", ""{0000010D-0000-0000-C000-000000000046}"""							
+286		OLE201_Reg524		AddRegData	"""Interface\{00000127-0000-0000-C000-000000000046}\NumMethods"", ""10"""							
+287		OLE201_Reg525		AddRegData	"""Interface\{00000128-0000-0000-C000-000000000046}"", ""IOleCache2"""							
+288		OLE201_Reg526		AddRegData	"""Interface\{00000128-0000-0000-C000-000000000046}\BaseInterface"", ""{0000011E-0000-0000-C000-000000000046}"""							
+289		OLE201_Reg527		AddRegData	"""Interface\{00000128-0000-0000-C000-000000000046}\NumMethods"", ""10"""							
+290		OLE201_Reg528		AddRegData	"""Interface\{00000129-0000-0000-C000-000000000046}"", ""IOleCacheControl"""							
+291		OLE201_Reg529		AddRegData	"""Interface\{00000129-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+292		OLE201_Reg530		AddRegData	"""Interface\{00020400-0000-0000-C000-000000000046}"", ""IDispatch"""							
+293		OLE201_Reg531		AddRegData	"""Interface\{00020400-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+294		OLE201_Reg532		AddRegData	"""Interface\{00020400-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00020420-0000-0000-C000-000000000046}"""							
+295		OLE201_Reg533		AddRegData	"""Interface\{00020404-0000-0000-C000-000000000046}"", ""IEnumVARIANT"""							
+296		OLE201_Reg534		AddRegData	"""Interface\{00020404-0000-0000-C000-000000000046}\NumMethods"", ""7"""							
+297		OLE201_Reg535		AddRegData	"""Interface\{00020404-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00020421-0000-0000-C000-000000000046}"""							
+298		OLE201_Reg536		AddRegData	"""Interface\{00020401-0000-0000-C000-000000000046}"", ""ITypeInfo"""							
+299		OLE201_Reg537		AddRegData	"""Interface\{00020401-0000-0000-C000-000000000046}\NumMethods"", ""22"""							
+300		OLE201_Reg538		AddRegData	"""Interface\{00020401-0000-0000-C000-000000000046}\ProxyStubClsid"", ""{00020422-0000-0000-C000-000000000046}"""							
+301		OLE201_Reg539		AddRegData	"""Interface\{00020402-0000-0000-C000-000000000046}"", ""ITypeLib"""							
+302		OLE201_Reg540		AddRegData	"""Interface\{00020402-0000-0000-C000-000000000046}\NumMethods"", ""13"""							
+303		OLE201_Reg541		AddRegData	"""Interface\{00020403-0000-0000-C000-000000000046}"", ""ITypeComp"""							
+304		OLE201_Reg542		AddRegData	"""Interface\{00020403-0000-0000-C000-000000000046}\NumMethods"", ""5"""							
+305		OLE201_Reg543		AddRegData	"""Interface\{00020405-0000-0000-C000-000000000046}"", ""ICreateTypeInfo"""							
+306		OLE201_Reg544		AddRegData	"""Interface\{00020405-0000-0000-C000-000000000046}\NumMethods"", ""26"""							
+307		OLE201_Reg545		AddRegData	"""Interface\{00020406-0000-0000-C000-000000000046}"", ""ICreateTypeLib"""							
+308		OLE201_Reg546		AddRegData	"""Interface\{00020406-0000-0000-C000-000000000046}\NumMethods"", ""13"""							
+309		OLE201_Reg547		AddRegData	"""TypeLib\{00020430-0000-0000-C000-000000000046}"", """""							
+310		OLE201_Reg548		AddRegData	"""TypeLib\{00020430-0000-0000-C000-000000000046}\1.0"", ""OLE Automation"""							
+311		OLE201_Reg549		AddRegData	"""TypeLib\{00020430-0000-0000-C000-000000000046}\1.0\HELPDIR"", """""							
+312		OLE201_Reg550		AddRegData	"""TypeLib\{00020430-0000-0000-C000-000000000046}\1.0\0\win16"", ""stdole.tlb"""							
+313		OLE201_Reg551		AddRegData	"""CLSID\{00020420-0000-0000-C000-000000000046}"", ""PSDispatch"""							
+314		OLE201_Reg552		AddRegData	"""CLSID\{00020420-0000-0000-C000-000000000046}\InprocServer"", ""ole2disp.dll"""							
+315		OLE201_Reg553		AddRegData	"""CLSID\{00020422-0000-0000-C000-000000000046}"", ""PSTypeInfo"""							
+316		OLE201_Reg554		AddRegData	"""CLSID\{00020422-0000-0000-C000-000000000046}\InprocServer"", ""ole2disp.dll"""							
+317		OLE201_Reg555		AddRegData	"""CLSID\{00020421-0000-0000-C000-000000000046}"", ""PSEnumVARIANT"""							
+318		OLE201_Reg556		AddRegData	"""CLSID\{00020421-0000-0000-C000-000000000046}\InprocServer"", ""ole2disp.dll"""							
+319		==== Installing USER's Options ====										
+320		---- User File Copying ----		Group	321 322 323 324 325 326 327 328 329 330 331 332 333 334 335							
+321		USER_File_start_mdb		CopyFile	"""User Files"", ""start_mdb"""					%d		
+322		USER_File_msau200_dll		CopyFile	"""User Files"", ""msau200_dll"""					%d		
+323		USER_File_helpex_hlp		CopyFile	"""User Files"", ""helpex_hlp"""					%d		
+324		USER_File_wzlib_mda		CopyFile	"""User Files"", ""wzlib_mda"""					%d		
+325		USER_File_bak12_gif		CopyFile	"""User Files"", ""bak12_gif"""					%d		
+326		USER_File_bal7_gif		CopyFile	"""User Files"", ""bal7_gif"""					%d		
+327		USER_File_comune_tit		CopyFile	"""User Files"", ""comune_tit"""					%d		
+328		USER_File_comunita_tit		CopyFile	"""User Files"", ""comunita_tit"""					%d		
+329		USER_File_sesamo_rlx		CopyFile	"""User Files"", ""sesamo_rlx"""					%d		
+330		USER_File_titol_tix		CopyFile	"""User Files"", ""titol_tix"""					%d		
+331		USER_File_sesamo_mdb		CopyFile	"""User Files"", ""sesamo_mdb"""					%d		
+332		USER_File_indice_idx		CopyFile	"""User Files"", ""indice_idx"""					%d		
+333		USER_File_sesamo_ini		CopyFile	"""User Files"", ""sesamo_ini"""					%17		
+334		USER_File_demo_rls		CopyFile	"""User Files"", ""demo_rls"""					%d		
+335		USER_File_icon_ico		CopyFile	"""User Files"", ""icon_ico"""					%d		
+336		---- User Non File Work ----		Group	337 339 342 343							
+337		---- User ProgMan Items ----		Group	338							
+338		USER_UserPM_1		AddProgmanItem	"""Sesamo"", ""Sesamo"", ""%26\msarn200.exe %331\sesamo.mdb /ini %333\sesamo.ini"", """""							
+339		---- User INI Entries ----		Group	340 341							
+340		USER_UserINI_1		AddIniLine	"""%333\sesamo.ini"", ""Options"", ""UtilityDB"", ""%26\utility.mda"""							
+341		USER_UserINI_2		AddIniLine	"""%333\sesamo.ini"", ""Options"", ""SystemDB"", ""%26\system.mda"""							
+342		Create SYSTEM.MDA		CustomAction	"""msacahbb.dll"", ""SyncEXECalloutCAH"", ""%s\wrkgadm.exe /sil /ini sesamo.ini"""					%40		
+343		Run Command at End		CustomAction	"""msacahbb.dll"", ""SyncEXECalloutCAH"", ""%s\msarn200.exe start.mdb /ini c:\windows\sesamo.ini"""					%321		

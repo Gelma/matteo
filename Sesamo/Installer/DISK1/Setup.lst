@@ -1,0 +1,18 @@
+[Params]
+        WndTitle   = Sesamo Setup
+        WndMess    = Starting Sesamo Setup...
+        TmpDirSize = 900
+        TmpDirName = ~msstfgf.t
+        CmdLine    = acmsetup /T setup.stf /S %s %s
+        DrvModName = acmsetup
+        Require31  = This program requires Microsoft Windows version 3.1 or later.
+
+[Files]
+        setup.inf    = setup.inf
+        setup.stf    = setup.stf
+        acmsetup.hl_ = acmsetup.hlp
+        mssetup.dll  = mssetup.dll
+        mscpydis.dl_ = mscpydis.dll
+        _mssetup.exe = _mssetup.exe
+        msacahbb.dl_ = msacahbb.dll
+        acmsetup.ex_ = acmsetup.exe
